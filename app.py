@@ -11,7 +11,7 @@ app = Flask(__name__)
 KEYS_FILE = "keys.json"
 
 UPSTREAM_API = "https://ft-osint-api.duckdns.org/api/number"
-UPSTREAM_KEY = "YOUR_UPSTREAM_KEY"
+UPSTREAM_KEY = "ft-rahun2m"
 
 # -------------------------
 # CREATE STORAGE
