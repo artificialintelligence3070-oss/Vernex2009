@@ -19,7 +19,8 @@ app.get("/api/number", async (req, res) => {
     data.by = "VERNEX";
 
     res.json(data);
-  } catch {
+
+  } catch (error) {
     res.status(500).json({
       success: false,
       message: "Server Error",
@@ -28,5 +29,11 @@ app.get("/api/number", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("VERNEX API Running");
+});
+
 const PORT = process.env.PORT || 3000;
-app.listen(PORT);
+app.listen(PORT, () => {
+  console.log(`Server Started on ${PORT}`);
+});
